@@ -8,7 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import { stockData } from "../data";
+// import { stockData } from "../data";
 import usersData from '../users.json'   
 
 const downloadFile = ({ data, fileName, fileType }) => {
@@ -35,25 +35,25 @@ const exportToJson = e => {
     })
 }
 
-const exportToCsv = e => {
-    e.preventDefault()
+// const exportToCsv = e => {
+//     e.preventDefault()
 
-    // Headers for each column
-    let headers = ['Id,Name,Surname,Age']
+//     // Headers for each column
+//     let headers = ['Id,Name,Surname,Age']
 
-    // Convert users data to a csv
-    let usersCsv = usersData.users.reduce((acc, user) => {
-        const { id, name, surname, age } = user
-        acc.push([id, name, surname, age].join(','))
-        return acc
-    }, [])
+//     // Convert users data to a csv
+//     let usersCsv = usersData.users.reduce((acc, user) => {
+//         const { id, name, surname, age } = user
+//         acc.push([id, name, surname, age].join(','))
+//         return acc
+//     }, [])
 
-    downloadFile({
-        data: [...headers, ...usersCsv].join('\n'),
-        fileName: 'users.csv',
-        fileType: 'text/csv',
-    })
-}
+//     downloadFile({
+//         data: [...headers, ...usersCsv].join('\n'),
+//         fileName: 'users.csv',
+//         fileType: 'text/csv',
+//     })
+// }
 
 const useStyles = makeStyles(theme => ({
     modal: {
@@ -73,7 +73,8 @@ export default function Cardcomponent() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
-        setOpen(true);
+        // setOpen(true);
+        setOpen(!open);
     };
     const handleClose = () => {
         setOpen(false);
@@ -82,11 +83,14 @@ export default function Cardcomponent() {
         <div style={{}}>
             <Card
                 style={{
-                    width: 400,
+                    width: 200,
                     backgroundColor: "orange",
                 }}
                 onClick={handleOpen}
+                onClose={handleClose}
             >
+                <CardActions >
+                {open ? <Modal />:null}
                 <CardContent>
                     <Typography
                         style={{ fontSize: 14 }}
@@ -110,7 +114,7 @@ export default function Cardcomponent() {
                         Stay Happy
                     </Typography>
                 </CardContent>
-                <CardActions >
+                
                     <Modal
                         aria-labelledby="transition-modal-title"
                         aria-describedby="transition-modal-description"
@@ -147,6 +151,7 @@ export default function Cardcomponent() {
                                         </tr>
                                     )
                                 })}
+                                <br></br>
                             <Button type='button' variant="contained" color="primary" onClick={exportToJson}>
                                 Download
                             </Button>

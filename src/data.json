@@ -1,205 +1,143 @@
-
-
-
-
-
 {
-    "nodes": [
-      {
-        "name": "15-24",
-        "type": "UA",
-        "properties": {
-          "name": "age_group"
-        },
-        "id": 0
+  "nodes": [
+    {
+      "name": "15-24",
+      "type": "UA",
+      "properties": {
+        "name": "age_group"
       },
-      {
-        "name": "narendra",
-        "type": "U",
-        "properties": {},
-        "id": 0
+      "id": 0
+    },
+    {
+      "name": "narendra",
+      "type": "U",
+      "properties": {},
+      "id": 0
+    },
+    {
+      "name": "vaccination_policy",
+      "type": "PC",
+      "properties": {
+        "default_oa": "vaccination_policy_default_OA",
+        "applicable": "indian_citizen",
+        "default_ua": "vaccination_policy_default_UA",
+        "rep": "vaccination_policy_rep"
       },
-      {
-        "name": "vaccination_policy",
-        "type": "PC",
-        "properties": {
-          "default_oa": "vaccination_policy_default_OA",
-          "applicable": "indian_citizen",
-          "default_ua": "vaccination_policy_default_UA",
-          "rep": "vaccination_policy_rep"
-        },
-        "id": 0
+      "id": 0
+    },
+    {
+      "name": "25-64",
+      "type": "UA",
+      "properties": {
+        "name": "age_group"
       },
-      {
-        "name": "25-64",
-        "type": "UA",
-        "properties": {
-          "name": "age_group"
-        },
-        "id": 0
+      "id": 0
+    },
+    {
+      "name": "http://localhost:8080/registration",
+      "type": "O",
+      "properties": {},
+      "id": 0
+    },
+    {
+      "name": "65 Above",
+      "type": "UA",
+      "properties": {
+        "name": "age_group"
       },
-      {
-        "name": "http://localhost:8080/registration",
-        "type": "O",
-        "properties": {},
-        "id": 0
+      "id": 0
+    },
+    {
+      "name": "Adhar ID",
+      "type": "OA",
+      "properties": {},
+      "id": 0
+    },
+    {
+      "name": "ram",
+      "type": "U",
+      "properties": {},
+      "id": 0
+    },
+    {
+      "name": "citizen",
+      "type": "UA",
+      "properties": {},
+      "id": 0
+    },
+    {
+      "name": "Rohit",
+      "type": "U",
+      "properties": {},
+      "id": 0
+    },
+    {
+      "name": "age_policy",
+      "type": "PC",
+      "properties": {
+        "default_oa": "age_policy_default_OA",
+        "applicable": "senior_citizens",
+        "default_ua": "age_policy_default_UA",
+        "rep": "age_policy_rep"
       },
-      {
-        "name": "65 Above",
-        "type": "UA",
-        "properties": {
-          "name": "age_group"
-        },
-        "id": 0
+      "id": 0
+    },
+    {
+      "name": "0-14",
+      "type": "UA",
+      "properties": {
+        "name": "age_group"
       },
-      {
-        "name": "Adhar ID",
-        "type": "OA",
-        "properties": {},
-        "id": 0
-      },
-      {
-        "name": "ram",
-        "type": "U",
-        "properties": {},
-        "id": 0
-      },
-      {
-        "name": "citizen",
-        "type": "UA",
-        "properties": {},
-        "id": 0
-      },
-      {
-        "name": "Rohit",
-        "type": "U",
-        "properties": {},
-        "id": 0
-      },
-      {
-        "name": "age_policy",
-        "type": "PC",
-        "properties": {
-          "default_oa": "age_policy_default_OA",
-          "applicable": "senior_citizens",
-          "default_ua": "age_policy_default_UA",
-          "rep": "age_policy_rep"
-        },
-        "id": 0
-      },
-      {
-        "name": "0-14",
-        "type": "UA",
-        "properties": {
-          "name": "age_group"
-        },
-        "id": 0
-      },
-      {
-        "name": "vivek",
-        "type": "U",
-        "properties": {},
-        "id": 0
-      },
-      {
-        "name": "senior_citizen",
-        "type": "OA",
-        "properties": {},
-        "id": 0
-      },
-      {
-        "name": "Application",
-        "type": "OA",
-        "properties": {},
-        "id": 0
-      }
-    ],
-    "assignments": [
-      [
-        "Application",
-        "vaccination_policy_default_OA"
-      ],
-      [
-        "ram",
-        "25-64"
-      ],
-      [
-        "citizen",
-        "vaccination_policy_default_UA"
-      ],
-      [
-        "65 Above",
-        "citizen"
-      ],
-      [
-        "vivek",
-        "15-24"
-      ],
-      [
-        "http://localhost:8080/registration",
-        "senior_citizen"
-      ],
-      [
-        "0-14",
-        "citizen"
-      ],
-      [
-        "senior_citizen",
-        "age_policy_default_OA"
-      ],
-      [
-        "Application",
-        "vaccination_policy_rep"
-      ],
-      [
-        "senior_citizen",
-        "age_policy_rep"
-      ],
-      [
-        "http://localhost:8080/registration",
-        "Adhar ID"
-      ],
-      [
-        "25-64",
-        "citizen"
-      ],
-      [
-        "citizen",
-        "age_policy_default_UA"
-      ],
-      [
-        "Rohit",
-        "0-14"
-      ],
-      [
-        "15-24",
-        "citizen"
-      ],
-      [
-        "narendra",
-        "65 Above"
-      ],
-      [
-        "Adhar ID",
-        "Application"
-      ]
-    ],
-    "associations": [
-      {
-        "source": "citizen",
-        "target": "Application",
-        "operations": [
-          "read",
-          "write"
-        ]
-      },
-      {
-        "source": "65 Above",
-        "target": "senior_citizen",
-        "operations": [
-          "read",
-          "write"
-        ]
-      }
-    ]
-  }
+      "id": 0
+    },
+    {
+      "name": "vivek",
+      "type": "U",
+      "properties": {},
+      "id": 0
+    },
+    {
+      "name": "senior_citizen",
+      "type": "OA",
+      "properties": {},
+      "id": 0
+    },
+    {
+      "name": "Application",
+      "type": "OA",
+      "properties": {},
+      "id": 0
+    }
+  ],
+  "assignments": [
+    ["Application", "vaccination_policy_default_OA"],
+    ["ram", "25-64"],
+    ["citizen", "vaccination_policy_default_UA"],
+    ["65 Above", "citizen"],
+    ["vivek", "15-24"],
+    ["http://localhost:8080/registration", "senior_citizen"],
+    ["0-14", "citizen"],
+    ["senior_citizen", "age_policy_default_OA"],
+    ["Application", "vaccination_policy_rep"],
+    ["senior_citizen", "age_policy_rep"],
+    ["http://localhost:8080/registration", "Adhar ID"],
+    ["25-64", "citizen"],
+    ["citizen", "age_policy_default_UA"],
+    ["Rohit", "0-14"],
+    ["15-24", "citizen"],
+    ["narendra", "65 Above"],
+    ["Adhar ID", "Application"]
+  ],
+  "associations": [
+    {
+      "source": "citizen",
+      "target": "Application",
+      "operations": ["read", "write"]
+    },
+    {
+      "source": "65 Above",
+      "target": "senior_citizen",
+      "operations": ["read", "write"]
+    }
+  ]
+}

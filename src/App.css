@@ -28,6 +28,23 @@
   color: #61dafb;
 }
 
+.hide{
+  width: 100%;
+  line-height: 1.2em;
+  height: 3.6em; 
+  background-color: #363636;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+clb{
+  padding: 0;
+border: none;
+background: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -37,11 +54,112 @@
   }
 }
 
+.dropdown {
+  position: relative;
+  color: #333;
+  cursor: default;
+}
+
+.dropdown .arrow {
+  border-color: #999 transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  content: " ";
+  display: block;
+  height: 0;
+  margin-top: 0.3rem;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  width: 0;
+}
+
+.dropdown .arrow.open {
+  border-color: transparent transparent #999;
+  border-width: 0 5px 5px;
+}
+
+.dropdown .selected-value {
+  line-height: 1.5;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: default;
+  outline: none;
+  padding: 8px 52px 8px 10px;
+  transition: all 200ms ease;
+  width: 100%;
+}
+
+.dropdown .options {
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin-top: -1px;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 1000;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dropdown .options.open {
+  display: block;
+}
+
+.dropdown .option {
+  box-sizing: border-box;
+  color: rgba(51, 51, 51, 0.8);
+  cursor: pointer;
+  display: block;
+  padding: 8px 10px;
+}
+
+.dropdown .option.selected,
+.dropdown .option:hover {
+  background-color: #f2f9fc;
+  color: #333;
+}
+
+.filter {
+  position: relative;
+  display: inline-block;
+ }
+ 
+ .filter__button {
+  border-radius: 0.125rem;
+  padding: 0.5rem 1rem;
+  background-color: #2b7de9;
+  background-image: none;
+  cursor: pointer;
+  border: transparent;
+  font-weight: 600;
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+ }
+ 
+ .filter__button:hover {
+  background-color: #176dde;
+ }
+ .filter__button:focus {
+  outline: 1px dotted;
+  outline: 1px auto -webkit-focus-ring-color;
+ }
+
 Table {
-  border: 2px solid forestgreen;
+  border: 1px solid forestgreen;
   width: 300px;
   height: 200px;
   display: inline-block;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
   
 TableHead {

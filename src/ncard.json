@@ -1,0 +1,29 @@
+{
+	"policies":
+	[
+		{
+			"policy_id":1,
+			"name":"abc",
+			"status":"ACTIVE",
+			"owner":"Akhilesh"
+		},
+        {
+            "policy_id":2,
+			"name":"def",
+			"status":"IN-ACTIVE",
+			"owner":"Raju"
+        },
+        {
+            "policy_id":3,
+			"name":"ghi",
+			"status":"ACTIVE",
+			"owner":"Tiwari"
+        },
+        {
+            "policy_id":4,
+			"name":"jkl",
+			"status":"TERMINATED",
+			"owner":"mohit"
+        }
+	]
+}
